@@ -545,6 +545,19 @@ body {
     font-style: italic;
 }
 
+.email-link {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    font-style: normal;
+}
+
+.email-link:hover {
+    color: #f9dc5c;
+    text-decoration: none;
+}
+
 /* ============================================
    MOTTO SECTION
    ============================================ */
