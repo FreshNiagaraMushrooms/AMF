@@ -218,6 +218,176 @@ body {
 }
 
 /* ============================================
+   JOIN THE ARMY - FACEBOOK CTA SECTION
+   ============================================ */
+
+.join-army-section {
+    margin: 80px 0 60px 0;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(238, 90, 111, 0.3);
+}
+
+/* Animated background effect */
+.join-army-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.join-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.join-icon-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.join-mushroom {
+    font-size: 50px;
+    display: inline-block;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.join-mushroom:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.join-mushroom:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.join-mushroom:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.join-army-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.join-description {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+.join-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0 40px 0;
+}
+
+.benefit {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.benefit:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* The main call-to-action button */
+.join-button {
+    display: inline-block;
+    padding: 18px 40px;
+    background: white;
+    color: #c44569;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pulsing glow effect */
+.join-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.join-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.join-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 12px 35px rgba(238, 90, 111, 0.4); }
+    50% { box-shadow: 0 12px 45px rgba(238, 90, 111, 0.6); }
+}
+
+.button-icon {
+    font-size: 1.4rem;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+}
+
+.join-footer {
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-style: italic;
+}
+
+/* ============================================
    MOTTO SECTION
    ============================================ */
 
@@ -325,5 +495,36 @@ body {
     .activities-grid,
     .help-grid {
         grid-template-columns: 1fr;
+    }
+
+    .join-army-section {
+        padding: 40px 25px;
+        margin: 60px 0 40px 0;
+    }
+
+    .join-army-section h2 {
+        font-size: 2rem;
+    }
+
+    .join-description {
+        font-size: 1.05rem;
+    }
+
+    .join-mushroom {
+        font-size: 40px;
+    }
+
+    .join-button {
+        font-size: 1.1rem;
+        padding: 15px 30px;
+    }
+
+    .join-benefits {
+        gap: 10px;
+    }
+
+    .benefit {
+        font-size: 0.85rem;
+        padding: 8px 15px;
     }
 }
